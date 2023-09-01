@@ -1,0 +1,44 @@
+ // Function to copy text to clipboard
+      function myFunction2aboutus(id) {
+        document.getElementById(id).select();
+        document.execCommand('copy');
+        document.getElementById('btn_cpy').innerHTML = "Copied!";
+        setTimeout(function() {
+          document.getElementById('btn_cpy').innerHTML = "Copy HTML Code";
+        }, 5000);
+      }
+    
+      // Function to generate content and display on the website
+      function myFunction1aboutus() {
+        var WebName = document.getElementById('Web_Name').value;
+        var WebType = document.getElementById('Web_Type').value;
+        var WebSpec = document.getElementById('Web_Spec').value;
+    
+        if (WebName === "" || WebType === "" || WebSpec === "") {
+          if (WebName === "") {
+            document.getElementById('Web_Name').style.border = "1px solid red";
+          }
+          if (WebType === "") {
+            document.getElementById('Web_Type').style.border = "1px solid red";
+          }
+          if (WebSpec === "") {
+            document.getElementById('Web_Spec').style.border = "1px solid red";
+          }
+        } else {
+          document.getElementById('Web_Name').style.border = "1px solid green";
+          document.getElementById('Web_Type').style.border = "1px solid green";
+          document.getElementById('Web_Spec').style.border = "1px solid green";
+          document.getElementById('W_Name1').innerHTML = WebName;
+          document.getElementById('W_Name2').innerHTML = WebName;
+          document.getElementById('W_Type1').innerHTML = WebType;
+          document.getElementById('W_Type2').innerHTML = WebType;
+          document.getElementById('W_Type3').innerHTML = WebType;
+          document.getElementById('W_Type4').innerHTML = WebType;
+          document.getElementById('W_Spec').innerHTML = WebSpec;
+    
+          var res = document.getElementById('P_Sample').innerHTML;
+          document.getElementById('result').innerHTML = res;
+          document.getElementById('Msg').innerHTML = "Congrats, Your About Us page is generated successfully. Copy the HTML code below!!";
+        }
+      }
+    
